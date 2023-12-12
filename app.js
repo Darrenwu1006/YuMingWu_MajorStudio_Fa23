@@ -47,6 +47,7 @@ const csvFiles = [
   './data/1940-1960.csv',
   './data/1960-1980.csv',
   './data/1980-2000.csv',
+  './data/2000-2020.csv',
   './data/top3_data_all.csv',
 ];
 

@@ -39,16 +39,15 @@ const yearPosition = {
 
 //shutter chart
 const csvFiles = [
-  'Data/1840-1860.csv',
-  'Data/1860-1880.csv',
-  'Data/1880-1900.csv',
-  'Data/1900-1920.csv',
-  'Data/1920-1940.csv',
-  'Data/1940-1960.csv',
-  'Data/1960-1980.csv',
-  'Data/1980-2000.csv',
-  'Data/2000-2020.csv',
-  'Data/top3_data_all.csv',
+  './data/1840-1860.csv',
+  './data/1860-1880.csv',
+  './data/1880-1900.csv',
+  './data/1900-1920.csv',
+  './data/1920-1940.csv',
+  './data/1940-1960.csv',
+  './data/1960-1980.csv',
+  './data/1980-2000.csv',
+  './data/top3_data_all.csv',
 ];
 
 const CSVCompiler = csvFiles.reduce((CSVCompiler, csv, i) => {

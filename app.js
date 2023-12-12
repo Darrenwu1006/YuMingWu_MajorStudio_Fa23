@@ -346,29 +346,29 @@ Promise.all(CSVCompiler).then(async function (dataArray) {
     // svg.selectAll('.rect').remove();
     let data;
     let numRectangles;
-    if (filtered) {
-      data = dataArray[row * numCols + col]
-        .filter((d) => d.medium === value)
-        .filter((d, i) => i < 180);
-      numRectangles = data.length;
-      // console.log(data);
-    } else {
-      data = dataArray[row * numCols + col].filter((d, i) => i < 180);
-      // console.log(data);
-      numRectangles = data.length;
-    }
     // if (filtered) {
     //   data = dataArray[row * numCols + col]
     //     .filter((d) => d.medium === value)
-    //     .sort(() => Math.random() - 0.5) // Shuffle the array randomly
-    //     .slice(0, 180); // Take the first 180 elements
+    //     .filter((d, i) => i < 180);
     //   numRectangles = data.length;
+    //   // console.log(data);
     // } else {
-    //   data = dataArray[row * numCols + col]
-    //     .sort(() => Math.random() - 0.5) // Shuffle the array randomly
-    //     .slice(0, 180); // Take the first 180 elements
+    //   data = dataArray[row * numCols + col].filter((d, i) => i < 180);
+    //   // console.log(data);
     //   numRectangles = data.length;
     // }
+    if (filtered) {
+      data = dataArray[row * numCols + col]
+        .filter((d) => d.medium === value)
+        .sort(() => Math.random() - 0.5) // Shuffle the array randomly
+        .slice(0, 180); // Take the first 180 elements
+      numRectangles = data.length;
+    } else {
+      data = dataArray[row * numCols + col]
+        .sort(() => Math.random() - 0.5) // Shuffle the array randomly
+        .slice(0, 180); // Take the first 180 elements
+      numRectangles = data.length;
+    }
 
     const newData = [];
     const colorGenerator = async (pic) => {

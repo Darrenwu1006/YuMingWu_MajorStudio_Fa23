@@ -1,8 +1,8 @@
 //Sankey diagram
 (width = window.innerWidth), (height = window.innerHeight);
 var margin = { top: 10, right: 0, bottom: 0, left: 3 },
-  width = 600 - margin.left - margin.right,
-  height = 1130 - margin.top - margin.bottom;
+  width = 600
+  height = 1130
 
 var formatNumber = d3.format(',.0f'), // zero decimal places
   format = function (d) {
@@ -535,7 +535,7 @@ Promise.all(CSVCompiler).then(async function (dataArray) {
       });
   }
   var animationDuration = [
-    1000, 1500, 2000, 2500, 3000 ,3500, 4000, 4500, 5000,
+    1000, 1500, 2000, 2500, 3000, 3500, 4000, 4500, 5000,
   ];
   function drawCirclesSequentially() {
     let currentDelay = 0;
@@ -545,10 +545,9 @@ Promise.all(CSVCompiler).then(async function (dataArray) {
         setTimeout(() => {
           drawCircle(col, row, numCols, false, '');
         }, currentDelay);
-        currentDelay += animationDuration[col] ;
+        currentDelay += animationDuration[col];
       }
     }
   }
   drawCirclesSequentially();
-
 });

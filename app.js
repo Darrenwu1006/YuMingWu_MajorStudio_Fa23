@@ -1,8 +1,8 @@
 //Sankey diagram
 (width = window.innerWidth), (height = window.innerHeight);
 var margin = { top: 10, right: 0, bottom: 0, left: 3 },
-  width = 600
-  height = 1130
+  width = 600;
+height = 1130;
 
 var formatNumber = d3.format(',.0f'), // zero decimal places
   format = function (d) {
@@ -250,8 +250,8 @@ Promise.all(CSVCompiler).then(async function (dataArray) {
         e.target.id.includes('8')
       ) {
         const year = e.target.id;
-        const col = yearPosition[year].col;
         const row = yearPosition[year].row;
+        const col = yearPosition[year].col;
 
         const nodeYearElement = d3.select('#description').select('span.year');
         nodeYearElement.text(function (d) {
@@ -265,7 +265,7 @@ Promise.all(CSVCompiler).then(async function (dataArray) {
           return 'Three Major Imaging Techniques';
         });
         d3.selectAll('.rect').remove();
-        drawCircle(col, row, numCols, false, '');
+        drawCircle(row, col, numCols, false, '');
       } else {
         const medium = e.target.id;
         d3.selectAll('.rect').remove();
@@ -346,29 +346,29 @@ Promise.all(CSVCompiler).then(async function (dataArray) {
     // svg.selectAll('.rect').remove();
     let data;
     let numRectangles;
-    // if (filtered) {
-    //   data = dataArray[row * numCols + col]
-    //     .filter((d) => d.medium === value)
-    //     .filter((d, i) => i < 180);
-    //   numRectangles = data.length;
-    //   // console.log(data);
-    // } else {
-    //   data = dataArray[row * numCols + col].filter((d, i) => i < 180);
-    //   // console.log(data);
-    //   numRectangles = data.length;
-    // }
     if (filtered) {
       data = dataArray[row * numCols + col]
         .filter((d) => d.medium === value)
-        .sort(() => Math.random() - 0.5) // Shuffle the array randomly
-        .slice(0, 180); // Take the first 180 elements
+        .filter((d, i) => i < 180);
       numRectangles = data.length;
+      // console.log(data);
     } else {
-      data = dataArray[row * numCols + col]
-        .sort(() => Math.random() - 0.5) // Shuffle the array randomly
-        .slice(0, 180); // Take the first 180 elements
+      data = dataArray[row * numCols + col].filter((d, i) => i < 180);
+      // console.log(data);
       numRectangles = data.length;
     }
+    // if (filtered) {
+    //   data = dataArray[row * numCols + col]
+    //     .filter((d) => d.medium === value)
+    //     .sort(() => 0.5 - Math.random())
+    //     .slice(0, 90);
+    //   numRectangles = data.length;
+    // } else {
+    //   data = dataArray[row * numCols + col]
+    //     .sort(() => 0.5 - Math.random())
+    //     .slice(0, 90);
+    //   numRectangles = data.length;
+    // }
 
     const newData = [];
     const colorGenerator = async (pic) => {
@@ -465,7 +465,7 @@ Promise.all(CSVCompiler).then(async function (dataArray) {
       .attr('width', rectWidth)
       .attr('height', rectHeight)
       .style('fill', (d, i) => `${newData[i].paletteList[1]}`)
-      .style('opacity', (d, i) => 0.6 - 0.0029 * i)
+      .style('opacity', (d, i) => 0.5 - 0.0029 * i)
       .style('stroke', '#ccc5b9')
       .style('stroke-width', 0.1)
       .attr('transform', (d, i) => {

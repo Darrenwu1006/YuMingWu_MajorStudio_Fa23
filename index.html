@@ -5,28 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://d3js.org/d3.v7.min.js"></script>
     <script src="https://unpkg.com/d3-sankey@0.12.3/dist/d3-sankey.min.js"></script> 
-    <script src="https://cdn.fusioncharts.com/fusioncharts/latest/fusioncharts.js"></script>
      <script src="libraries/vibrant.js"></script>
+     <link rel="stylesheet" href="https://use.typekit.net/cdc0jml.css">
     <link rel="stylesheet" href="style.css">
     <title>Time-Lapse Photo Portal</title>
   </head>
   <body>
     <div class= "container">
-      <div id="description"></div>
-      <div class="title">Photo</br>Aura</div>
       <div >
       <div id="sankey_container"></div>
-      <div class="continaer"></div>
-      <div class="title">asv</div>>
+      <!-- <div class="continaer"></div> -->
       </div>
 
-      <div id="shutter_container"></div>
+      <div id="shutter_container">
+        <div class="title" onclick="this">A Technicolor Kaleidoscope
+        <div class="subtitle">
+          Imaging Technologies in the Sands of Time
+        </div>
+        </div>
+        <div id="description">This set of photos dates back to the 
+          <span class="year">1840 - 2000</span>, developed through 
+          <span class="medium">Numerous Photo Imaging Technologies</span>, with a quantity of approximately
+          <span class="value">20,000</span> images. </div>
+      </div>
       <div class="hover-menu">
         <a></a>
         <img src="iiifthumburl" alt="img">
         <p></p>
         <b></b>
-        </div>
+      </div>
       </div>
       </div>
     </div>

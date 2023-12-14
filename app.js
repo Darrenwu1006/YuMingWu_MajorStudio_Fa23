@@ -153,7 +153,7 @@ Promise.all(CSVCompiler).then(async function (dataArray) {
       //description of the link
       const mediumElement = d3.select('#description').select('span.medium');
       mediumElement.text(function (d) {
-        return medium.toUpperCase();
+        return medium;
       });
       const yearElement = d3.select('#description').select('span.year');
       yearElement.text(function (d) {
@@ -276,7 +276,7 @@ Promise.all(CSVCompiler).then(async function (dataArray) {
               .select('#description')
               .select('span.medium');
             nodeMediumElement.text(function (d) {
-              return medium.toUpperCase();
+              return medium;
             });
 
             const nodeYearElement = d3
@@ -447,7 +447,7 @@ Promise.all(CSVCompiler).then(async function (dataArray) {
       .style('fill', '#ebebeb')
       .style('text-anchor', 'middle')
       .style('dominant-baseline', 'middle')
-      .style('font-family', 'halyard-text, sans-serif')
+      .style('font-family', ' itc-avant-garde-gothic-pro, sans-serif')
       .style('font-style', 'normal')
       .style('font-weight', '100')
       .style('pointer-events', 'none');
@@ -469,7 +469,7 @@ Promise.all(CSVCompiler).then(async function (dataArray) {
       .style('stroke', '#ccc5b9')
       .style('stroke-width', 0.1)
       .attr('transform', (d, i) => {
-        let angle = ((i * angleStep + rotationAngle) * Math.PI) / 180;
+        let angle = ((i * angleStep + rotationAngle) * Math.PI) / 30;
         let rectRotationX = circleX + circleRadius * Math.cos(angle);
         let rectRotationY = circleY + circleRadius * Math.sin(angle);
         return (
@@ -492,7 +492,6 @@ Promise.all(CSVCompiler).then(async function (dataArray) {
         const title = hoverMenu.querySelector('p');
         const medium = hoverMenu.querySelector('b');
         const objectid = hoverMenu.querySelector('a');
-
         image.src = d.url;
         title.textContent = d.title;
         medium.textContent = d.medium;

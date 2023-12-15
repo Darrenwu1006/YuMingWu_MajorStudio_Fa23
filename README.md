@@ -19,6 +19,3 @@ Also, each node and link can interact with the main visuals. Additionally, it au
 ![GIF](gif/hoverPhoto.gif)
 And the last one I want to share is the hover-menu. Each blade of the nine kaleidoscopes is a color abstraction from a real photograph.
 To enhance readability, I've also created a hover menu for each, allowing users to access the original photo and increasing visibility through this function. 
-
-
-## Feel free to explore it on my GitHub

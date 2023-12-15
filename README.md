@@ -4,7 +4,6 @@
 This project is a curated online exhibition highlighting the evolution of imaging techniques in photography over the decades. The centerpiece is a Sankey Diagram showcasing the top three techniques each decade, serving as a control panel for nine lenses on the side. The lenses not only display quantitative changes in technology but also enable interactive exploration of photographic works. The goal is to allow the audience to appreciate the charm of various imaging technologies, observing their rise, decline, and impact on each era.
 
 
-
 ![GIF](gif/landingPage.gif)
 
 When first entering this page, I hope my audience can place their focus on the kaleidoscope. Therefore, I've created an animation that allows them to load in one by one, corresponding to different eras.

@@ -6,22 +6,19 @@ This project is a curated online exhibition highlighting the evolution of imagin
 
 
 ![GIF](gif/landingPage.gif)
-	When first entering this page, I hope my audience can place their focus on the kaleidoscope. Therefore, I've created an animation that allows them to load in one by one, corresponding to different eras.
 
-	By adopting this animation, I aim to provide my audience with a clear lens to capture the unique atmospheres present in photos from different eras.
+When first entering this page, I hope my audience can place their focus on the kaleidoscope. Therefore, I've created an animation that allows them to load in one by one, corresponding to different eras.
+By adopting this animation, I aim to provide my audience with a clear lens to capture the unique atmospheres present in photos from different eras.
 
 ![GIF](gif/sankeyInteraction.gif)
-	I set this Sankey Diagram as the second layer of information for the project, providing a more analytical perspective on the topic. 
 
-	However, it's not just about conveying information; I've turned it into a controller. When you hover your mouse over it, it pops up from the background. 
-
-	Also, each node and link can interact with the main visuals. Additionally, it automatically displays information about the collection in labels next to the main visuals.
+I set this Sankey Diagram as the second layer of information for the project, providing a more analytical perspective on the topic. However, it's not just about conveying information; I've turned it into a controller. When you hover your mouse over it, it pops up from the background. 
+Also, each node and link can interact with the main visuals. Additionally, it automatically displays information about the collection in labels next to the main visuals.
 
 
 ![GIF](gif/hoverPhoto.gif)
-	And the last one I want to share is the hover-menu. Each blade of the nine kaleidoscopes is a color abstraction from a real photograph.
+And the last one I want to share is the hover-menu. Each blade of the nine kaleidoscopes is a color abstraction from a real photograph.
+To enhance readability, I've also created a hover menu for each, allowing users to access the original photo and increasing visibility through this function. 
 
-	To enhance readability, I've also created a hover menu for each, allowing users to access the original photo and increasing visibility through this function. 
 
-
-##Feel free to explore it on my GitHub
+## Feel free to explore it on my GitHub
